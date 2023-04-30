@@ -1,0 +1,30 @@
+service start_hostap /vendor/bin/wifi_hostap.sh start
+    group wifi readproc
+    disabled
+    oneshot
+
+service stop_hostap /vendor/bin/wifi_hostap.sh stop
+    group wifi readproc
+    disabled
+    oneshot
+
+service start_switch /vendor/bin/wifi_hostap.sh switch
+    group wifi readproc
+    disabled
+    oneshot
+
+service start_update /vendor/bin/wifi_hostap.sh update
+    group wifi readproc
+    disabled
+    oneshot
+
+service start_bridged /vendor/bin/wifi_bridged.sh start
+    group wifi readproc
+    disabled
+    oneshot
+
+service stop_bridged /vendor/bin/wifi_bridged.sh stop
+    group wifi readproc
+    disabled
+    oneshot
+
